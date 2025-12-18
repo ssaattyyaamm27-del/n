@@ -70,6 +70,14 @@ button {
   font-size: 48px;
   display: none;
 }
+.input-row {
+  position: relative;
+  z-index: 10;
+}
+
+#lavender {
+  pointer-events: none;
+}
 
 /* Pink mode */
 .pink {
