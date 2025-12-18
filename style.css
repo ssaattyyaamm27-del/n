@@ -1,0 +1,78 @@
+:root {
+  --accent: white;
+  --bg: #0e0e0e;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.caption {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+
+#chat {
+  height: 320px;
+  border: 1px solid #2a2a2a;
+  padding: 10px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin-bottom: 8px;
+}
+
+.input-row {
+  display: flex;
+  gap: 6px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  background: #111;
+  color: var(--accent);
+  border: 1px solid #333;
+}
+
+button {
+  padding: 8px 14px;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+/* Lavender easter egg */
+#lavender {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  font-size: 48px;
+  display: none;
+}
+
+/* Pink mode */
+.pink {
+  --accent: #ff7ac8;
+  --bg: #1a0e16;
+}
