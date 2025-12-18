@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
       },
       body: JSON.stringify({
-        model: "gpt-4.1-mini",
+        model: "gpt-3.5-turbo",
         messages: [
           {
             role: "system",
@@ -23,10 +23,16 @@ export default async function handler(req, res) {
       })
     });
 
+    if (!response.ok) {
+      const errText = await response.text();
+      console.error("OpenAI API error:", errText);
+      return res.status(500).json({ reply: "Apologies, Supreme Leader. The server failed me." });
+    }
+
     const data = await response.json();
     res.status(200).json({ reply: data.choices[0].message.content });
   } catch (error) {
+    console.error("Server error:", error);
     res.status(500).json({ reply: "Apologies, Supreme Leader. The server failed me." });
   }
 }
-
