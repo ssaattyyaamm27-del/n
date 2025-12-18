@@ -15,7 +15,6 @@ body {
   margin: 40px auto;
   padding: 20px;
   position: relative;
-  z-index: 10;
 }
 
 h1 {
@@ -36,9 +35,6 @@ h1 {
   border: 1px solid #2a2a2a;
   padding: 10px;
   overflow-y: auto;
-  margin-bottom: 10px;
-  z-index: 10;
-  position: relative;
 }
 
 .message {
@@ -48,8 +44,6 @@ h1 {
 .input-row {
   display: flex;
   gap: 6px;
-  position: relative;
-  z-index: 20; /* ensures input & button are above everything */
 }
 
 input {
@@ -58,8 +52,8 @@ input {
   background: #111;
   color: var(--accent);
   border: 1px solid #333;
+  z-index: 10;
   position: relative;
-  z-index: 20;
 }
 
 button {
@@ -68,8 +62,8 @@ button {
   color: #000;
   border: none;
   cursor: pointer;
+  z-index: 10;
   position: relative;
-  z-index: 20;
 }
 
 /* Lavender easter egg */
@@ -79,8 +73,7 @@ button {
   right: 16px;
   font-size: 48px;
   display: none;
-  pointer-events: none; /* ensures it does not block typing */
-  z-index: 5;
+  pointer-events: none; /* will not block typing */
 }
 
 /* Pink mode for Varsha */
